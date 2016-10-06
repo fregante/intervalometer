@@ -22,7 +22,7 @@
   "module": "dist/intervalometer.es-modules.js",
   "jsnext:main": "dist/intervalometer.es-modules.js",
   "scripts": {
-    "build:js": "bfred-npm-bundler intervalometer Intervalometer",
+    "build:js": "bfred-npm-bundler intervalometer intervalometer",
     "build": "npm-run-all --silent jsfix build:*",
     "jsfix": "xo --fix",
     "watch:build": "onchange 'index.js' --initial -- npm run build -- --continue-on-error",

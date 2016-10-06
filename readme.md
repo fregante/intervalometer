@@ -45,6 +45,8 @@ Pick your favorite:
 
 ```html
 <script src="dist/intervalometer.browser.js"></script>
+<!-- use as intervalometer.frameIntervalometer(cb) -->
+<!--     or intervalometer.timerIntervalometer(cb, ms) -->
 ```
 
 ```sh
