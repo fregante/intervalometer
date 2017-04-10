@@ -6,20 +6,18 @@ export function intervalometer(cb, request, cancel, requestParameter) {
 		requestId = request(loop, requestParameter);
 
 		// called with "ms since last call". 0 on start()
-		cb(now - (previousLoopTime || now));
+		cb(now ? now - previousLoopTime : 0);
 
 		previousLoopTime = now;
 	}
 	return {
 		start() {
 			if (!requestId) { // prevent double starts
-				loop(0);
+				loop();
 			}
 		},
 		stop() {
-			cancel(requestId);
-			requestId = null;
-			previousLoopTime = 0;
+			requestId = cancel(requestId);
 		}
 	};
 }
