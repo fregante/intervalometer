@@ -16,7 +16,8 @@
     "settimeout"
   ],
   "files": [
-    "dist"
+    "dist",
+    "index.d.ts"
   ],
   "main": "dist/intervalometer.common-js.js",
   "module": "dist/intervalometer.es-modules.js",
@@ -28,18 +29,30 @@
     "watch:build": "onchange 'index.js' --initial -- npm run build -- --continue-on-error",
     "watch": "npm-run-all --parallel --silent watch:*",
     "prepublish": "npm run build",
-    "test": "xo; npm run build"
+    "test": "xo && tsd && npm run build"
   },
   "devDependencies": {
+    "@sindresorhus/tsconfig": "^0.3.0",
+    "@typescript-eslint/eslint-plugin": "^1.4.2",
     "bfred-npm-bundler": "^7.1.2",
+    "eslint-config-xo-typescript": "^0.9.0",
     "npm-run-all": "^3.1.0",
     "onchange": "^3.0.2",
-    "xo": "^0.16.0"
+    "tsd": "^0.7.2",
+    "xo": "*"
   },
   "xo": {
-    "esnext": true,
-    "env": [
+    "extensions": [
+      "ts"
+    ],
+    "envs": [
       "browser"
+    ],
+    "overrides": [
+      {
+        "files": "**/*.ts",
+        "extends": "xo-typescript"
+      }
     ]
   }
 }
