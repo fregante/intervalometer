@@ -22,7 +22,7 @@ export function intervalometer(callback: VoidFunction, request: typeof requestAn
 /**
  * A time-based intervalometer.
  *
- * @param callback A callback that will be invoked after the given timeframe.
+ * @param callback A callback that will be invoked after the given time-frame.
  * @param timeInMillis Time in milliseconds.
  */
 export function timerIntervalometer(callback: VoidFunction, timeInMillis: number): IntervalometerReturnValue;
