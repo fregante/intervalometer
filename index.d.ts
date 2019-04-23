@@ -1,4 +1,3 @@
-
 /// <reference lib="dom" />
 
 export interface CancelCallback {
@@ -11,13 +10,17 @@ interface IntervalometerReturnValue {
 }
 
 /**
- *
  * @param callback A callback that will be called.
  * @param request A window's requestAnimationFrame or setTimeout.
  * @param cancel A callback that will cancel the given intervalometer. Typically a window's cancelAnimationFrame or clearTimeout.
  * @param millis Time in milliseconds.
  */
-export function intervalometer(callback: VoidFunction, request: typeof requestAnimationFrame | typeof setTimeout, cancel: CancelCallback, millis?: number): IntervalometerReturnValue;
+export function intervalometer(
+	callback: VoidFunction,
+	request: typeof requestAnimationFrame | typeof setTimeout,
+	cancel: CancelCallback,
+	millis?: number
+): IntervalometerReturnValue;
 
 /**
  * A time-based intervalometer.
@@ -25,7 +28,10 @@ export function intervalometer(callback: VoidFunction, request: typeof requestAn
  * @param callback A callback that will be invoked after the given time-frame.
  * @param timeInMillis Time in milliseconds.
  */
-export function timerIntervalometer(callback: VoidFunction, timeInMillis: number): IntervalometerReturnValue;
+export function timerIntervalometer(
+	callback: VoidFunction,
+	timeInMillis: number
+): IntervalometerReturnValue;
 
 /**
  * A frame-based intervalometer. It uses requestAnimationFrame and calls the provided callback at every frame.
@@ -33,4 +39,6 @@ export function timerIntervalometer(callback: VoidFunction, timeInMillis: number
  *
  * @param callback A callback that will be called on each animation frame.
  */
-export function frameIntervalometer(callback: VoidFunction): IntervalometerReturnValue;
+export function frameIntervalometer(
+	callback: VoidFunction
+): IntervalometerReturnValue;
