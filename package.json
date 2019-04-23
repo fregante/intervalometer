@@ -1,6 +1,6 @@
 {
   "name": "intervalometer",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Call a function at every frame or every X ms. With start/stop",
   "license": "MIT",
   "repository": "bfred-it/intervalometer",
