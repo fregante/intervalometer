@@ -1,8 +1,6 @@
 /// <reference lib="dom" />
 
-export interface CancelCallback {
-	(requestId: number): void;
-}
+export type CancelCallback = (requestId: number) => void;
 
 interface IntervalometerReturnValue {
 	start: VoidFunction;

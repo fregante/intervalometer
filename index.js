@@ -2,17 +2,18 @@ export function intervalometer(cb, request, cancel, requestParameter) {
 	let requestId;
 	let previousLoopTime;
 	function loop(now) {
-		// must be requested before cb() because that might call .stop()
+		// Must be requested before cb() because that might call .stop()
 		requestId = request(loop, requestParameter);
 
-		// called with "ms since last call". 0 on start()
+		// Called with "ms since last call". 0 on start()
 		cb(now - (previousLoopTime || now));
 
 		previousLoopTime = now;
 	}
+
 	return {
 		start() {
-			if (!requestId) { // prevent double starts
+			if (!requestId) { // Prevent double starts
 				loop(0);
 			}
 		},
