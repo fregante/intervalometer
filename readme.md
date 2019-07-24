@@ -2,8 +2,8 @@
 
 > Call a function at every frame or every X ms. With start/stop
 
-[![gzipped size](https://badges.herokuapp.com/size/github/bfred-it/intervalometer/master/dist/intervalometer.browser.js?gzip=true&label=gzipped%20size)](#readme)
-[![Travis build](https://api.travis-ci.org/bfred-it/intervalometer.svg)](https://travis-ci.org/bfred-it/intervalometer)
+[![gzipped size](https://badges.herokuapp.com/size/github/fregante/intervalometer/master/dist/intervalometer.browser.js?gzip=true&label=gzipped%20size)](#readme)
+[![Travis build](https://api.travis-ci.org/fregante/intervalometer.svg)](https://travis-ci.org/fregante/intervalometer)
 [![npm link](https://img.shields.io/npm/v/intervalometer.svg)](https://www.npmjs.com/package/intervalometer)
 
 ## Usage
@@ -69,9 +69,9 @@ None! `frameIntervalometer` only works where `window.requestAnimationFrame` is a
 
 ## Related
 
-* [iphone-inline-video](https://github.com/bfred-it/iphone-inline-video/): `video[playsinline]` polyfill that uses this module.
-* [animate-prop](https://github.com/bfred-it/animate-prop): Single low-level function to tween any property over time.
+* [iphone-inline-video](https://github.com/fregante/iphone-inline-video/): `video[playsinline]` polyfill that uses this module.
+* [animate-prop](https://github.com/fregante/animate-prop): Single low-level function to tween any property over time.
 
 ## License
 
-MIT © [Federico Brigante](http://twitter.com/bfred_it)
+MIT © [Federico Brigante](https://bfred.it)

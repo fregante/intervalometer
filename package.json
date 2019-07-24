@@ -2,19 +2,19 @@
   "name": "intervalometer",
   "version": "1.0.5",
   "description": "Call a function at every frame or every X ms. With start/stop",
-  "license": "MIT",
-  "repository": "bfred-it/intervalometer",
-  "author": "Federico Brigante <github@bfred.it> (bfred.it)",
   "keywords": [
-    "interval",
     "frame",
+    "interval",
+    "requestanimationframe",
+    "setinterval",
+    "settimeout",
     "start",
     "stop",
-    "requestanimationframe",
-    "timeout",
-    "setinterval",
-    "settimeout"
+    "timeout"
   ],
+  "repository": "fregante/intervalometer",
+  "license": "MIT",
+  "author": "Federico Brigante <opensource@bfred.it> (bfred.it)",
   "files": [
     "dist",
     "index.d.ts"
@@ -23,13 +23,27 @@
   "module": "dist/intervalometer.es-modules.js",
   "jsnext:main": "dist/intervalometer.es-modules.js",
   "scripts": {
-    "build:js": "bfred-npm-bundler intervalometer intervalometer",
     "build": "npm-run-all --silent jsfix build:*",
+    "build:js": "bfred-npm-bundler intervalometer intervalometer",
     "jsfix": "xo --fix",
-    "watch:build": "onchange 'index.js' --initial -- npm run build -- --continue-on-error",
-    "watch": "npm-run-all --parallel --silent watch:*",
     "prepublish": "npm run build",
-    "test": "xo && tsd && npm run build"
+    "test": "xo && tsd && npm run build",
+    "watch": "npm-run-all --parallel --silent watch:*",
+    "watch:build": "onchange 'index.js' --initial -- npm run build -- --continue-on-error"
+  },
+  "xo": {
+    "envs": [
+      "browser"
+    ],
+    "extensions": [
+      "ts"
+    ],
+    "overrides": [
+      {
+        "files": "**/*.ts",
+        "extends": "xo-typescript"
+      }
+    ]
   },
   "devDependencies": {
     "@sindresorhus/tsconfig": "^0.3.0",
@@ -40,19 +54,5 @@
     "onchange": "^3.0.2",
     "tsd": "^0.7.2",
     "xo": "*"
-  },
-  "xo": {
-    "extensions": [
-      "ts"
-    ],
-    "envs": [
-      "browser"
-    ],
-    "overrides": [
-      {
-        "files": "**/*.ts",
-        "extends": "xo-typescript"
-      }
-    ]
   }
 }
