@@ -13,15 +13,16 @@
     "timeout"
   ],
   "repository": "fregante/intervalometer",
+  "funding": "https://github.com/sponsors/fregante",
   "license": "MIT",
-  "author": "Federico Brigante <opensource@bfred.it> (bfred.it)",
+  "author": "Federico Brigante <me@fregante.com>",
+  "main": "dist/intervalometer.common-js.js",
+  "module": "dist/intervalometer.es-modules.js",
+  "jsnext:main": "dist/intervalometer.es-modules.js",
   "files": [
     "dist",
     "index.d.ts"
   ],
-  "main": "dist/intervalometer.common-js.js",
-  "module": "dist/intervalometer.es-modules.js",
-  "jsnext:main": "dist/intervalometer.es-modules.js",
   "scripts": {
     "build": "npm-run-all --silent jsfix build:*",
     "build:js": "bfred-npm-bundler intervalometer intervalometer",

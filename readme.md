@@ -74,4 +74,4 @@ None! `frameIntervalometer` only works where `window.requestAnimationFrame` is a
 
 ## License
 
-MIT © [Federico Brigante](https://bfred.it)
+MIT © [Federico Brigante](https://fregante.com)
