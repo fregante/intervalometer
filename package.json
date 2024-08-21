@@ -1,6 +1,6 @@
 {
   "name": "intervalometer",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Call a function at every frame or every X ms. With start/stop",
   "keywords": [
     "frame",
